@@ -1,3 +1,9 @@
 FROM tobi312/rpi-nginx
+
+RUN apt-get update && \
+    apt-get install telnet iputils-ping && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 COPY nginx.conf /etc/nginx/nginx.conf
 CMD ["nginx", "-g", "daemon off;"]

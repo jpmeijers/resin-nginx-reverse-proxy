@@ -6,4 +6,5 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY start.sh start.sh
+COPY nginx.conf /etc/nginx/nginx.conf
 CMD ["bash", "start.sh"]

@@ -7,4 +7,4 @@ else
   sed -i -e 's/https:\/\/192.168.8.100\//$NGINX_URL/g' /etc/nginx/nginx.conf
 fi
 cat /etc/nginx/nginx.conf
-nginx -g daemon off;
+nginx -g "daemon off";
